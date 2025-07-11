@@ -9,8 +9,6 @@ A thin command‑line wrapper around Google’s [csp‑evaluator](https://github
 ### 1. Local usage (Node ≥ 20)
 
 ```bash
-npm install --global csp-evaluator-cli   # after you publish
-
 # Evaluate an inline policy
 csp-eval -c "script-src 'self' https://cdn.example.com"
 
