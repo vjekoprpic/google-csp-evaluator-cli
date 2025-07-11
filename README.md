@@ -4,7 +4,9 @@ A thin command‑line wrapper around Google’s [csp‑evaluator](https://github
 
 ---
 
+
 ## Quick start
+
 
 ### 1. Local usage (Node ≥ 20)
 
