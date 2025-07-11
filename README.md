@@ -69,7 +69,7 @@ If none of `--csp` or `--file` is provided, the tool falls back to **stdin**.
 ## Installation from source
 
 ```bash
-git clone [https://github.com/yourname/csp-evaluator-cli.git](https://github.com/vjekoprpic/google-csp-evaluator-cli.git)
+git clone https://github.com/vjekoprpic/google-csp-evaluator-cli.git
 cd google-csp-evaluator-cli
 npm install
 npm link  # adds 'csp-eval' to your PATH
