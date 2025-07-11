@@ -62,6 +62,7 @@ docker run --rm -v $(pwd):/work -w /work csp-eval -f ./csp.txt
 | `--csp`     | `-c`  | CSP string to evaluate            |
 | `--file`    | `-f`  | Path to a file containing the CSP |
 | `--help`    | `-h`  | Show usage information            |
+| ``          | `-m`  | minified                          |
 | `--version` | `-V`  | Show version                      |
 
 If none of `--csp` or `--file` is provided, the tool falls back to **stdin**.
