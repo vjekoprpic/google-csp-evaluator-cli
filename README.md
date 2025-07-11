@@ -4,22 +4,11 @@ A thin command‑line wrapper around Google’s [csp‑evaluator](https://github
 
 ---
 
-## Features
-
-* 🤏 **Zero‑config** – just pass a CSP string, file, or stdin
-* 🐳 **Docker‑ready** – run without Node on your host
-* 📦 **ESM** – modern import/export syntax
-* 💚 **Lightweight** – Alpine base image, production deps only
-
----
-
 ## Quick start
 
 ### 1. Local usage (Node ≥ 20)
 
 ```bash
-npm install --global csp-evaluator-cli   # after you publish
-
 # Evaluate an inline policy
 csp-eval -c "script-src 'self' https://cdn.example.com"
 
@@ -52,7 +41,7 @@ curl -s https://example.com | grep -i "content-security-policy" | awk -F':' '{pr
 ### 2. Docker
 
 ```bash
-# Build the image (or pull ghcr.io/yourname/csp-eval:latest once published)
+# Build the image 
 docker build -t csp-eval .
 
 # Run it just like the CLI
@@ -80,8 +69,8 @@ If none of `--csp` or `--file` is provided, the tool falls back to **stdin**.
 ## Installation from source
 
 ```bash
-git clone https://github.com/yourname/csp-evaluator-cli.git
-cd csp-evaluator-cli
+git clone https://github.com/vjekoprpic/google-csp-evaluator-cli.git
+cd google-csp-evaluator-cli
 npm install
 npm link  # adds 'csp-eval' to your PATH
 ```
