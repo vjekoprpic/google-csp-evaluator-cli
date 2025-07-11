@@ -41,7 +41,7 @@ curl -s https://example.com | grep -i "content-security-policy" | awk -F':' '{pr
 ### 2. Docker
 
 ```bash
-# Build the image (or pull ghcr.io/yourname/csp-eval:latest once published)
+# Build the image 
 docker build -t csp-eval .
 
 # Run it just like the CLI
