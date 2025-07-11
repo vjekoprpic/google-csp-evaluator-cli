@@ -4,15 +4,6 @@ A thin command‑line wrapper around Google’s [csp‑evaluator](https://github
 
 ---
 
-## Features
-
-* 🤏 **Zero‑config** – just pass a CSP string, file, or stdin
-* 🐳 **Docker‑ready** – run without Node on your host
-* 📦 **ESM** – modern import/export syntax
-* 💚 **Lightweight** – Alpine base image, production deps only
-
----
-
 ## Quick start
 
 ### 1. Local usage (Node ≥ 20)
