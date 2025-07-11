@@ -21,6 +21,7 @@ program
   .description('Evaluate Content‑Security‑Policy strings')
   .option('-c, --csp <string>', 'CSP string to evaluate')
   .option('-f, --file <path>', 'Path to a file containing a CSP string')
+  .option('-m, Not pretty JSON output')
   .version('1.0.0');
 
 program.parse(process.argv);
@@ -57,9 +58,19 @@ const main = async () => {
   }
 
   try {
-    const parsed = new CspParser(csp).csp;
-    const result = new CspEvaluator(parsed).evaluate();
-    console.log(JSON.stringify(result, null, 2));
+    const minimal = process.argv.includes('-m') || process.argv.includes('--minimal');
+
+    const parsed  = new CspParser(csp).csp;
+    const result  = new CspEvaluator(parsed).evaluate();
+
+    if (minimal) {
+    // Print only the raw result (handy for shell pipelines / CI checks)
+        console.log(JSON.stringify(result));          
+    } else {
+    // Default: nicely formatted JSON block
+        console.log(JSON.stringify(result, null, 2));
+    }
+
   } catch (err) {
     console.error(`Error while evaluating CSP: ${err.message}`);
     process.exit(3);
